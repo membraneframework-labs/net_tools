@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# cleans all settings set by other scripts
+
+INT=wlo1
+
+tc qdisc delete dev $INT root
