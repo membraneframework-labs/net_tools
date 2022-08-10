@@ -1,0 +1,5 @@
+# drop all incoming udp traffic on ports 50000-60000
+iptables -A INPUT -p udp -m udp -m multiport --dports 50000:60000 -j DROP
+
+# drop all outgoing udp traffic on ports 50000-60000
+iptables -A OUTPUT -p udp -m udp -m multiport --dports 50000:60000 -j DROP
